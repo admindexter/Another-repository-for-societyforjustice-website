@@ -1,0 +1,24 @@
+<p>
+  <b>Title:</b>
+  <%=h @press.title %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @press.position %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @press.author %>
+</p>
+
+<p>
+  <b>Information:</b>
+  <%= @press.information %>
+</p>
+
+
+<%= link_to 'Edit', edit_press_path(@press) %> |
+<%= link_to 'Back', presses_path %>
+

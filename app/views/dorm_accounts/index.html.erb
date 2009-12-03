@@ -1,0 +1,30 @@
+<h1>Listing dorm_accounts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ac number</th>
+    <th>Location</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Other info</th>
+  </tr>
+
+<% @dorm_accounts.each do |dorm_account| %>
+  <tr>
+    <td><%=h dorm_account.name %></td>
+    <td><%=h dorm_account.ac_number %></td>
+    <td><%=h dorm_account.location %></td>
+    <td><%=h dorm_account.address %></td>
+    <td><%=h dorm_account.description %></td>
+    <td><%=h dorm_account.other_info %></td>
+    <td><%= link_to 'Show', dorm_account %></td>
+    <td><%= link_to 'Edit', edit_dorm_account_path(dorm_account) %></td>
+    <td><%= link_to 'Destroy', dorm_account, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dorm_account', new_dorm_account_path %>

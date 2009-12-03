@@ -1,0 +1,28 @@
+<h1>Listing guestbooks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>Lastname</th>
+    <th>Firstname</th>
+    <th>Email</th>
+  </tr>
+
+<% @guestbooks.each do |guestbook| %>
+  <tr>
+    <td><%=h guestbook.title %></td>
+    <td><%=h guestbook.comment %></td>
+    <td><%=h guestbook.lastname %></td>
+    <td><%=h guestbook.firstname %></td>
+    <td><%=h guestbook.email %></td>
+    <td><%= link_to 'Show', guestbook %></td>
+    <td><%= link_to 'Edit', edit_guestbook_path(guestbook) %></td>
+    <td><%= link_to 'Destroy', guestbook, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New guestbook', new_guestbook_path %>

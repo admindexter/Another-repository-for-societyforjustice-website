@@ -1,0 +1,28 @@
+<h4><%=h @article.title %></h4>
+
+<div id="news_article_photo">
+
+  <div class="last_photo">
+    <%= image_tag @article.photo.url(:preview) %>
+  </div>
+
+  <div id="news_article_photo_tag">
+    <b><%=h @article.location %></b><br />
+
+    <%=h @article.emphasis %><br />
+
+    <%=h @article.author %><br />
+
+    <%=h @article.date_of_event %><br />
+  </div>
+</div>
+
+<%= @article.information %>
+
+<% if admin? %>
+  <span class="return_link"><%= link_to 'Edit', edit_article_path(@article) %></span>
+  <span> | </span>
+<% end %>
+
+<span class="return_link"><%= link_to 'Back', articles_path %></span>
+

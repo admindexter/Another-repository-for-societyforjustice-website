@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @dorm_account.name %>
+</p>
+
+<p>
+  <b>Ac number:</b>
+  <%=h @dorm_account.ac_number %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @dorm_account.location %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @dorm_account.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @dorm_account.description %>
+</p>
+
+<p>
+  <b>Other info:</b>
+  <%=h @dorm_account.other_info %>
+</p>
+
+
+<%= link_to 'Edit', edit_dorm_account_path(@dorm_account) %> |
+<%= link_to 'Back', dorm_accounts_path %>
